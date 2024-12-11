@@ -68,7 +68,7 @@ div.type-Diamonds:after {
 
 div.type-Spades:before {
   content: "♠";
-  font-size: 100px;
+  font-size: 110px;
   position: absolute;
   top: 8px;
   left: 20px;
@@ -77,7 +77,7 @@ div.type-Spades:before {
 
 div.type-Spades:after {
   content: "♠";
-  font-size: 100px;
+  font-size: 110px;
   position: absolute;
   bottom: 8px;
   right: 20px;
