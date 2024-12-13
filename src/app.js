@@ -21,6 +21,7 @@ function cardGenerator() {
     "Q",
     "K"
   ];
+
   let cardType = ["Diamonds", "Spades", "Clubs", "Hearts"];
   let randomCardNumber = Math.floor(Math.random() * cardNumber.length);
   let randomCardType = Math.floor(Math.random() * cardType.length);
@@ -33,6 +34,10 @@ function cardGenerator() {
   document
     .getElementById("randomCard")
     .classList.add(randomType(finalCardType));
+}
+
+function cardGenratorTimer() {
+  setTimeout(cardGenerator, 2000);
 }
 
 function randomType(cardType) {
@@ -48,10 +53,19 @@ function randomType(cardType) {
 window.onload = function() {
   cardGenerator();
 
-  const button = document.getElementById("cardButton");
-  if (button) {
-    button.addEventListener("click", function() {
+  const cardButton = document.getElementById("cardButton");
+  if (cardButton) {
+    cardButton.addEventListener("click", function() {
       cardGenerator();
     });
   }
+
+  const cardButtonTimer = document.getElementById("cardButtonTimer");
+  if (cardButtonTimer) {
+    cardButtonTimer.addEventListener("click", function() {
+      cardGenratorTimer();
+    });
+  }
 };
+
+//falta que el temporizador sea un bucle y botón para pararlo
